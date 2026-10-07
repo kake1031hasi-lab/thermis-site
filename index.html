@@ -5,43 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>株式会社Thermis | 日常に溶け込む「不可視のケア」</title>
   <meta name="description" content="株式会社Thermisは、日常の端末操作データから潜在的な中枢神経疲労・心身の変調を可視化するディープテック・スタートアップです。">
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-dark: #071917;
-      --bg-surface: rgba(14, 38, 35, 0.7);
-      --bg-card: rgba(20, 52, 48, 0.5);
+      --bg-dark: #061614;
+      --bg-surface: rgba(12, 34, 31, 0.75);
       --primary-teal: #48c9b0;
       --soft-mint: #a3e4d7;
-      --pale-green: #e8f8f5;
-      --accent-gold: #d4ac0d;
       --text-main: #f0f7f5;
-      --text-muted: #95b3ad;
-      --border-color: rgba(72, 201, 176, 0.25);
-      --border-glow: rgba(72, 201, 176, 0.4);
+      --text-muted: #8faea7;
+      --border-color: rgba(72, 201, 176, 0.2);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
       font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.8;
+      line-height: 1.85;
       font-weight: 300;
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 15% 20%, rgba(72, 201, 176, 0.12) 0%, transparent 45%),
-        radial-gradient(circle at 85% 65%, rgba(163, 228, 215, 0.08) 0%, transparent 50%),
-        linear-gradient(to bottom, #071917, #0a221f);
     }
 
     .container {
@@ -50,15 +38,14 @@
       padding: 0 24px;
     }
 
-    /* Header */
     header {
-      padding: 24px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border-color);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(7, 25, 23, 0.85);
+      background: rgba(6, 22, 20, 0.85);
     }
 
     .header-inner {
@@ -69,13 +56,11 @@
 
     .brand-logo {
       font-family: 'Cinzel', serif;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      color: #ffffff;
+      text-decoration: none;
     }
 
     .brand-logo span {
@@ -84,23 +69,27 @@
 
     .tag-invisible {
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       color: var(--soft-mint);
       text-transform: uppercase;
       font-family: 'Cinzel', serif;
     }
 
-    /* Hero Section */
+    /* ヒーロー背景画像 */
     .hero {
-      padding: 90px 0 70px;
-      text-align: center;
       position: relative;
+      padding: 130px 0 100px;
+      text-align: center;
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(to bottom, rgba(6, 22, 20, 0.78), rgba(6, 22, 20, 0.95)), url('hero-bg.png');
     }
 
     .badge-sub {
       display: inline-block;
       padding: 6px 18px;
-      border: 1px solid var(--border-glow);
+      border: 1px solid var(--border-color);
       border-radius: 40px;
       font-size: 12px;
       letter-spacing: 2px;
@@ -111,16 +100,16 @@
     }
 
     .hero-title {
-      font-size: 44px;
+      font-size: 42px;
       font-weight: 700;
-      line-height: 1.4;
+      line-height: 1.45;
       margin-bottom: 24px;
       letter-spacing: 1px;
       color: #ffffff;
     }
 
     .hero-title .highlight {
-      background: linear-gradient(120deg, #ffffff 30%, var(--soft-mint) 70%, var(--primary-teal) 100%);
+      background: linear-gradient(120deg, #ffffff 20%, var(--soft-mint) 70%, var(--primary-teal) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -129,12 +118,12 @@
       font-size: 16px;
       color: var(--text-muted);
       max-width: 680px;
-      margin: 0 auto 36px;
+      margin: 0 auto 38px;
     }
 
     .btn-contact {
       display: inline-block;
-      padding: 14px 34px;
+      padding: 15px 38px;
       background: linear-gradient(135deg, #3ab89f, #227c6b);
       color: #ffffff;
       text-decoration: none;
@@ -144,30 +133,32 @@
       letter-spacing: 1px;
       border: 1px solid rgba(163, 228, 215, 0.4);
       box-shadow: 0 6px 20px rgba(40, 140, 120, 0.3);
+      cursor: pointer;
       transition: all 0.3s ease;
     }
 
     .btn-contact:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(72, 201, 176, 0.45);
+      box-shadow: 0 8px 26px rgba(72, 201, 176, 0.45);
       background: linear-gradient(135deg, #48c9b0, #2c9783);
     }
 
-    /* Concept Section */
+    section { padding: 60px 0; }
+
     .section-title {
       text-align: center;
       margin-bottom: 48px;
     }
 
     .section-title h2 {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
-      color: var(--text-main);
+      color: #ffffff;
       letter-spacing: 1px;
     }
 
     .section-title p {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--soft-mint);
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -177,9 +168,8 @@
 
     .concept-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       gap: 24px;
-      margin-bottom: 80px;
     }
 
     .card {
@@ -188,78 +178,69 @@
       border-radius: 12px;
       padding: 32px 28px;
       backdrop-filter: blur(8px);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: var(--border-glow);
     }
 
     .card-label {
       font-family: 'Cinzel', serif;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 2px;
       color: var(--soft-mint);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       text-transform: uppercase;
     }
 
     .card h3 {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 600;
       color: #ffffff;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     .card p {
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    /* Technology Section */
-    .tech-box {
-      background: linear-gradient(145deg, rgba(14, 38, 35, 0.8), rgba(7, 25, 23, 0.95));
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 44px;
-      margin-bottom: 80px;
+      line-height: 1.75;
     }
 
     .tech-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 24px;
     }
 
-    @media (max-width: 768px) {
-      .hero-title { font-size: 30px; }
-      .tech-grid { grid-template-columns: 1fr; }
-      .tech-box { padding: 28px; }
+    .tech-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 36px 32px;
     }
 
-    .tech-item h4 {
+    .tech-card h4 {
       font-size: 20px;
       font-weight: 600;
       color: var(--primary-teal);
       margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    .tech-item p {
+    .tech-card p {
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    /* Company Info Table */
+    .contact-box {
+      background: linear-gradient(145deg, rgba(14, 38, 35, 0.8), rgba(6, 22, 20, 0.95));
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 44px 30px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .company-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 16px;
+      margin-top: 10px;
     }
 
     .company-table th, .company-table td {
@@ -275,36 +256,39 @@
       text-align: left;
     }
 
-    .company-table td {
-      color: var(--text-main);
-    }
+    .company-table td { color: var(--text-main); }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border-color);
-      padding: 40px 0;
+      padding: 36px 0;
       text-align: center;
       font-size: 13px;
       color: var(--text-muted);
-      background: rgba(7, 25, 23, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 28px; }
+      .tech-grid { grid-template-columns: 1fr; }
+      .company-table th, .company-table td { display: block; width: 100%; }
+      .company-table th { padding-bottom: 4px; }
+      .company-table td { padding-top: 0; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
+ <header>
     <div class="container header-inner">
-      <div class="brand-logo">
+      <a href="#" class="brand-logo">
+        <img src="logo.png" alt="Thermis Logo">
         Thermis<span>.</span>
-      </div>
+      </a>
       <div class="tag-invisible">
         Invisible Care for Wellness
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="badge-sub">NEUROLOGICAL KINEMATICS TECH</div>
@@ -315,103 +299,110 @@
       <p class="hero-desc">
         株式会社Thermis（テルミス）は、日常の端末操作データから中枢神経疲労と心身の変調を客観的に捉え、重大事故や未病を防ぐディープテック・スタートアップです。
       </p>
-      <a href="mailto:t.kakehashi@thermis.jp" class="btn-contact">PoC・事業連携のお問い合わせ</a>
+      <!-- Googleフォームへのリンク（別タブで開く） -->
+      <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" class="btn-contact">PoC・事業連携のお問い合わせ</a>
     </div>
   </section>
 
-  <!-- Philosophy Section -->
-  <section class="container">
-    <div class="section-title">
-      <h2>「Thermis（テルミス）」の由来と調律思想</h2>
-      <p>Philosophy of Care & Objective Truth</p>
-    </div>
-
-    <div class="concept-grid">
-      <div class="card">
-        <div class="card-label">Thermal</div>
-        <h3>温もり・調律</h3>
-        <p>
-          古くから人々が心身を癒やし、穏やかに整えてきた温泉のような自然体の温もり。無理な自己管理を強いることなく、健やかな日常へと優しく調律します。
-        </p>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>「Thermis」に込めた願い</h2>
+        <p>Philosophy of Care & Objective Truth</p>
       </div>
 
-      <div class="card">
-        <div class="card-label">Themis</div>
-        <h3>客観・公正な真実</h3>
-        <p>
-          法と公正の女神「テミス」の天秤のように。主観や先入観に左右されず、ミリ秒単位の客観的運動データによって心身の真実のコンディションを捉えます。
-        </p>
-      </div>
+      <div class="concept-grid">
+        <div class="card">
+          <div class="card-label">Thermal</div>
+          <h3>温もり・調律</h3>
+          <p>古くから人々が心身を癒やし、穏やかに整えてきた温泉のような自然体の温もり。無理な自己管理を強いることなく、健やかな日常へと優しく調律します。</p>
+        </div>
 
-      <div class="card">
-        <div class="card-label">Invisible</div>
-        <h3>不可視のケア</h3>
-        <p>
-          専用デバイスの常時装着や監視ストレスを一切排除。日常のPCやスマートフォン操作の裏側で静かに寄り添い、変調を未然に察知します。
-        </p>
+        <div class="card">
+          <div class="card-label">Invisible</div>
+          <h3>不可視のケア</h3>
+          <p>専用デバイスの常時装着や監視ストレスを排除。日常のPCやスマートフォン操作の裏側で静かに寄り添い、変調を未然に察知します。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Themis</div>
+          <h3>客観・公正な真実</h3>
+          <p>法と公正の女神「テミス」の天秤のように。主観や先入観に左右されず、ミリ秒単位の客観的運動データによって心身の真実のコンディションを捉えます。</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Technology Section -->
-  <section class="container">
-    <div class="section-title">
-      <h2>中枢神経疲労を捉える基盤技術</h2>
-      <p>Core Proprietary Solutions</p>
-    </div>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>基盤技術ソリューション</h2>
+        <p>Core Proprietary Solutions</p>
+      </div>
 
-    <div class="tech-box">
       <div class="tech-grid">
-        <div class="tech-item">
+        <div class="tech-card">
           <h4>AWA-ENGINE</h4>
-          <p>
-            キーボードやマウスなどの端末操作ログから、微小なキネマティクス制御の乱れ（Jerk Cost等）を抽出。主観的なアンケートでは見落とされがちな「脳の疲労・機能低下」をリアルタイムに推定する解析アルゴリズムです。
-          </p>
+          <p>日常の端末操作ログから微小なキネマティクス制御の乱れ（Jerk Cost等）を抽出。主観的なアンケートでは見落とされがちな「脳の疲労・機能低下」をリアルタイムに推定する解析アルゴリズムです。</p>
         </div>
-        <div class="tech-item">
+        <div class="tech-card">
           <h4>TransTAP</h4>
-          <p>
-            短時間のタッピング操作により、反復運動のブレや協調運動障害を高精度に定量化する評価システム。理学療法の臨床知見に基づき、産業現場の過労検知から将来的にはSaMD（医療機器ソフトウェア）まで展開を見据えます。
-          </p>
+          <p>短時間のタッピング操作により、反復運動のブレや協調運動障害を高精度に定量化する評価システム。理学療法の臨床知見に基づき、産業現場の過労検知から将来的にはSaMD（医療機器ソフトウェア）まで展開を見据えます。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Company Section -->
-  <section class="container" style="margin-bottom: 90px;">
-    <div class="section-title">
-      <h2>会社概要</h2>
-      <p>Company Overview</p>
-    </div>
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>お問い合わせ</h2>
+        <p>Contact</p>
+      </div>
 
-    <div class="card" style="padding: 10px 24px;">
-      <table class="company-table">
-        <tr>
-          <th>会社名</th>
-          <td>株式会社Thermis（テルミス）</td>
-        </tr>
-        <tr>
-          <th>設立</th>
-          <td>2026年10月1日</td>
-        </tr>
-        <tr>
-          <th>代表者</th>
-          <td>代表取締役 梯 智貴</td>
-        </tr>
-        <tr>
-          <th>事業内容</th>
-          <td>端末操作ログに基づく中枢神経疲労可視化システムの開発、SaMDプログラム医療機器の研究開発、ヘルスケアデータ解析事業</td>
-        </tr>
-        <tr>
-          <th>連絡先</th>
-          <td>t.kakehashi@thermis.jp</td>
-        </tr>
-      </table>
+      <div class="contact-box">
+        <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 24px;">
+          実証実験（PoC）、共同研究、事業提携に関するご相談は、下記お問い合わせフォームより受け付けております。
+        </p>
+        <!-- 下部にもGoogleフォームボタンを配置 -->
+        <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" class="btn-contact">お問い合わせフォームを開く</a>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 20px;">
+          直接メールでのご連絡：<span style="color: var(--soft-mint); text-decoration: underline;">t.kakehashi@thermis.jp</span>
+        </p>
+      </div>
+
+      <div class="section-title" style="margin-top: 60px;">
+        <h2>会社概要</h2>
+        <p>Company Overview</p>
+      </div>
+
+      <div class="card" style="padding: 10px 24px;">
+        <table class="company-table">
+          <tr>
+            <th>会社名</th>
+            <td>株式会社Thermis（テルミス）</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>2026年10月1日</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役 梯 智貴</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>端末操作ログに基づく中枢神経疲労可視化システムの開発、SaMDプログラム医療機器の研究開発、ヘルスケアデータ解析事業</td>
+          </tr>
+          <tr>
+            <th>連絡先</th>
+            <td>t.kakehashi@thermis.jp</td>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
       <p>© 2026 Thermis Co., Ltd. All Rights Reserved.</p>
