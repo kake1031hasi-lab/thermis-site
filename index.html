@@ -11,13 +11,13 @@
   
   <style>
     :root {
-      --bg-dark: #061614;
-      --bg-surface: rgba(12, 34, 31, 0.75);
+      --bg-dark: #051614;
+      --bg-surface: rgba(10, 32, 29, 0.8);
       --primary-teal: #48c9b0;
       --soft-mint: #a3e4d7;
       --text-main: #f0f7f5;
       --text-muted: #8faea7;
-      --border-color: rgba(72, 201, 176, 0.2);
+      --border-color: rgba(72, 201, 176, 0.25);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,13 +40,13 @@
 
     /* Header */
     header {
-      padding: 16px 0;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border-color);
       backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 22, 20, 0.9);
+      background: rgba(5, 22, 20, 0.94);
     }
 
     .header-inner {
@@ -55,21 +55,18 @@
       align-items: center;
     }
 
-    /* ロゴのサイズを強制的に固定 */
+    /* logo2.png に合わせた最適なサイズ設定 */
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
       text-decoration: none;
     }
 
     .brand-logo img {
-      height: 38px !important;
-      max-height: 38px !important;
-      width: auto !important;
-      max-width: 180px !important;
+      height: 46px;
+      width: auto;
       object-fit: contain;
-      border-radius: 4px;
+      border-radius: 6px;
       display: block;
     }
 
@@ -84,12 +81,14 @@
     /* Hero */
     .hero {
       position: relative;
-      padding: 120px 0 90px;
+      padding: 130px 0 100px;
       text-align: center;
       background-size: cover;
-      background-position: center top;
+      background-position: center 20%;
       background-repeat: no-repeat;
-      background-image: linear-gradient(to bottom, rgba(6, 22, 20, 0.82), rgba(6, 22, 20, 0.95)), url('hero-bg.png');
+      background-image: 
+        linear-gradient(to bottom, rgba(5, 22, 20, 0.72), rgba(5, 22, 20, 0.95)),
+        url('hero-bg.png');
     }
 
     .badge-sub {
@@ -283,10 +282,11 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="container header-inner">
       <a href="#" class="brand-logo">
-        <img src="logo.png" alt="Thermis">
+        <img src="logo2.png" alt="Thermis">
       </a>
       <div class="tag-invisible">
         Invisible Care for Wellness
@@ -294,6 +294,7 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="badge-sub">NEUROLOGICAL KINEMATICS TECH</div>
@@ -304,11 +305,11 @@
       <p class="hero-desc">
         株式会社Thermis（テルミス）は、日常の端末操作データから中枢神経疲労と心身の変調を客観的に捉え、重大事故や未病を防ぐディープテック・スタートアップです。
       </p>
-      <!-- お問い合わせボタン（最下部の連絡先へジャンプ） -->
       <a href="#contact" class="btn-contact">PoC・事業連携のお問い合わせ</a>
     </div>
   </section>
 
+  <!-- Philosophy Section -->
   <section>
     <div class="container">
       <div class="section-title">
@@ -328,4 +329,98 @@
         <div class="card">
           <div class="card-label">Invisible</div>
           <h3>不可視のケア</h3>
-          <p>専用デバイスの常時装着や監視ストレスを排除。日常のPCやスマートフォン操作の裏側で静かに寄り添い、
+          <p>専用デバイスの常時装着や監視ストレスを排除。日常のPCやスマートフォン操作の裏側で静かに寄り添い、変調を未然に察知します。</p>
+        </div>
+
+        <!-- 3. Themis -->
+        <div class="card">
+          <div class="card-label">Themis</div>
+          <h3>客観・公正な真実</h3>
+          <p>法と公正の女神「テミス」の天秤のように。主観や先入観に左右されず、ミリ秒単位の客観的運動データによって心身の真実のコンディションを捉えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>基盤技術ソリューション</h2>
+        <p>Core Proprietary Solutions</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <h4>AWA-ENGINE</h4>
+          <p>日常の端末操作ログから微小なキネマティクス制御の乱れ（Jerk Cost等）を抽出。主観的なアンケートでは見落とされがちな「脳の疲労・機能低下」をリアルタイムに推定する解析アルゴリズムです。</p>
+        </div>
+        <div class="tech-card">
+          <h4>TransTAP</h4>
+          <p>短時間のタッピング操作により、反復運動のブレや協調運動障害を高精度に定量化する評価システム。理学療法の臨床知見に基づき、産業現場の過労検知から将来的にはSaMD（医療機器ソフトウェア）まで展開を見据えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Company Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>お問い合わせ</h2>
+        <p>Contact Us</p>
+      </div>
+
+      <div class="contact-box">
+        <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 20px;">
+          実証実験（PoC）、共同研究、事業連携に関するご相談は、下記お問い合わせ窓口より受け付けております。
+        </p>
+        <p style="font-size: 15px; color: var(--soft-mint); margin-bottom: 8px; font-weight: 500;">
+          代表メールアドレス
+        </p>
+        <a href="mailto:t.kakehashi@thermis.jp" style="font-size: 20px; color: #ffffff; text-decoration: underline; letter-spacing: 1px;">
+          t.kakehashi@thermis.jp
+        </a>
+      </div>
+
+      <div class="section-title" style="margin-top: 60px;">
+        <h2>会社概要</h2>
+        <p>Company Overview</p>
+      </div>
+
+      <div class="card" style="padding: 10px 24px;">
+        <table class="company-table">
+          <tr>
+            <th>会社名</th>
+            <td>株式会社Thermis（テルミス）</td>
+          </tr>
+          <tr>
+            <th>設立</th>
+            <td>2026年10月1日</td>
+          </tr>
+          <tr>
+            <th>代表者</th>
+            <td>代表取締役 梯 智貴</td>
+          </tr>
+          <tr>
+            <th>事業内容</th>
+            <td>端末操作ログに基づく中枢神経疲労可視化システムの開発、SaMDプログラム医療機器の研究開発、ヘルスケアデータ解析事業</td>
+          </tr>
+          <tr>
+            <th>連絡先</th>
+            <td>t.kakehashi@thermis.jp</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Thermis Co., Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
